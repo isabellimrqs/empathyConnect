@@ -1,0 +1,40 @@
+HTML - ChatBot
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="script.js" defer></script>
+</head>
+
+<body class="show-chatbot">
+    <button class="chatbot-toggler">
+        <span class="material-symbols-outlined">mode_comment</span>
+        <span class="material-symbols-outlined" onclick="toggleChatbot()">close</span>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>ChatBot</h2>
+            <span class="material-symbols-outlined" onclick="toggleChatbot()">close</span>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <img src="./img/CALMIGO-removebg-preview.png">
+                <p>Olá, tudo bem?  Sou o Calmigo! <br>Como eu poderia te ajudar hoje?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea id="user-input" placeholder="Fale o que está sentindo." required></textarea>
+            <span id="send-btn" class="material-symbols-outlined" onclick="sendMessage()">send</span>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

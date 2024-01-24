@@ -1,0 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+ <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>

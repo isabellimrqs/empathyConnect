@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css_memoria/reset.css">
+  <link rel="stylesheet" href="../css_memoria/login.css">
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+  <script defer src="../js_memoria/login.js"></script>
+  <link rel="shortcut icon" href="../images/brain.png" type="image/x-icon">
+  <title>Memory Game | Login</title>
+</head>
+
+<body>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <form class="login-form">
+
+    <div class="login__header">
+      <img src="../fotos_memoria/ec.png" alt="logo">
+      <h1>Jogo da Memória - ETS</h1>
+    </div>
+
+    <input type="text" placeholder="Name" class="login__input">
+    <button type="submit" class="login__button">Play</button>
+
+  </form>
+
+</body>
+
+</html>

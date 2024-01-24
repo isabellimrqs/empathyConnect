@@ -1,0 +1,1875 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #47b0cd;
+	width: 2px;
+}
+body {
+	overflow-x: hidden;
+	background-color: #e3f2fd;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header_left img {
+	object-fit: contain;
+	height: 52px;
+	margin-right: 10px;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	justify-content: space-evenly;
+	border-bottom: 0.1px solid lightgray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #47b0cd;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+		rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.header_left {
+	display: flex;
+}
+
+.header_right {
+	display: flex;
+	margin-top: 15px;
+}
+
+.header_search {
+	padding: 10px;
+	margin-top: 4px;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	height: 42px;
+	color: gray;
+	background-color: rgba(255, 255, 255, 0.21);
+}
+
+.header_search > input {
+	outline: none;
+	border: none;
+	background: none;
+}
+
+.headerOption {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 20px;
+	color: white;
+	cursor: pointer;
+}
+
+.headerOption:hover {
+	color: rgb(140, 209, 227);
+}
+
+.headerOption h3 {
+	font-size: 12px;
+	margin-top: 10px;
+	font-weight: 400;
+}
+
+.headerOption_icon {
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+}
+
+/*Início do Game*/
+
+.game {
+	padding-top: 65px;
+	text-align: center;
+	margin-right: 150px;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.input label {
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+
+.input select {
+	border: none;
+	border-radius: 8px;
+	min-width: 300px;
+	font-size: 16px;
+	padding: 8px 4px;
+	background-color: #3aa9c7;
+	color: #fff;
+}
+
+.input select:focus {
+	outline: none;
+}
+
+.circle-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.circle-outline {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 15px solid #8a3274;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.circle-progress {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background-color: #3aa9c7;
+	border-radius: 50%;
+	transition: 4s ease all;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.circle-grow {
+	transform: scale(5.3);
+}
+
+.breaths {
+	text-align: center;
+	margin-bottom: 24px;
+	font-size: 24px;
+}
+
+.instructions {
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+button {
+	padding: 8px 20px;
+	border-radius: 8px;
+	background-color: #3aa9c7;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s ease all;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+button:hover {
+	background-color: #f1f1f1;
+	color: #36b5ff;
+}
+
+.button-inactive {
+	pointer-events: none;
+	background-color: #3aa9c7;
+}
+/*Fim do Game*/
+
+.mascote2 {
+	margin-right: 1200px;
+}
+
+.mascote_game_ansiedade {
+	margin-right: 150px;
+	justify-content: space-evenly;
+}
+
+.container_ansiedade {
+	flex-direction: row-reverse;
+	display: flex;
+	width: 1000px;
+	margin-top: 5px;
+}
+
+/*Testando ScrollReveal*/
+.efeito-scroll-reveal {
+	visibility: hidden;
+}
+h1 {
+	margin-left: 360px;
+	padding-top: 85px;
+	color: #8a3274;
+}
+
+.title_subtitle {
+	font-size: 45px;
+	text-align: center;
+	padding-top: 65px;
+}
+.title_subtitle > h2 {
+	color: #8a3274;
+}
+
+.title_subtitle > h3 {
+	color: #536595;
+}
+
+/*Efeito flutuante CalMigo*/
+@keyframes float {
+	0%,
+	100% {
+		transform: translatey(0);
+	}
+	50% {
+		transform: translatey(-30px);
+	}
+}
+.efeito-flutuante-infinito {
+	animation: float 3s ease-in-out infinite;
+}
+
+/*INÍCIO DA PÁGINA DE ANSIEDADE*/
+
+/*Slide 1*/
+.mascote_title_ansiedade img {
+	margin-top: 35px;
+	margin-left: 400px;
+}
+
+.quadrado {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 100px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 2*/
+.mascote_title_ansiedade2 img {
+	margin-top: 35px;
+	margin-right: 820px;
+}
+
+.quadrado2 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 100px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado2 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 3*/
+
+.mascote_title_ansiedade3 img {
+	margin-top: 35px;
+	margin-left: 400px;
+}
+
+.quadrado3 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 150px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado3 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 4*/
+.quadrado4 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 250px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 3350px;
+	left: 350px;
+}
+
+.quadrado4 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide4 img {
+	width: 1865px;
+	position: relative;
+}
+.img_slide4 {
+	background-color: #c6d5e6;
+}
+
+/*Slide 5*/
+.quadrado5 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 150px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 5150px;
+	left: 350px;
+}
+
+.quadrado5 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide5 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 6*/
+.mascote_title_ansiedade6 img {
+	margin-top: 35px;
+	margin-right: 820px;
+}
+
+.quadrado6 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 200px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado6 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 7*/
+.mascote_title_ansiedade7 img {
+	margin-left: 820px;
+	position: relative;
+	bottom: 360px;
+	left: 20px;
+}
+
+.quadrado7 {
+	background-color: rgb(255, 255, 255);
+	width: 800px;
+	height: 50px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 400px;
+	margin-top: 300px;
+}
+
+.quadrado7 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.books {
+	position: relative;
+	bottom: 450px;
+	right: 260px;
+}
+
+/*Slide 8*/
+.mascote_title_ansiedade8 img {
+	margin-bottom: 35px;
+	margin-right: 820px;
+}
+
+.quadrado8 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 100px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado8 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*FIM DA PÁGINA DE ANSIEDADE*/
+
+/*INÍCIO DA PÁGINA DE TDA*/
+.container_tda {
+	flex-direction: row;
+	display: flex;
+	width: 1000px;
+	margin-top: 5px;
+	padding-top: 50px;
+}
+
+.mascote_tda {
+	margin-left: 50px;
+	justify-content: space-evenly;
+}
+
+/*Slide 9*/
+.mascote_title_ansiedade9 img {
+	margin-top: 35px;
+	margin-right: 820px;
+}
+
+.quadrado9 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 150px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado9 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 10*/
+.quadrado10 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 130px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 3350px;
+	left: 350px;
+}
+
+.quadrado10 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide10 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 11*/
+.mascote_title_ansiedade11 img {
+	margin-top: 35px;
+}
+
+.quadrado11 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 150px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	/* margin-right: 210px;  */
+	margin-bottom: 45px;
+}
+
+.quadrado11 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.diferenca {
+	font-size: 100px;
+	font-weight: 600;
+	color: gray;
+}
+
+/*Slide 12*/
+.mascote_title_ansiedade12 img {
+	margin-top: 35px;
+	margin-left: 400px;
+}
+
+.quadrado12 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 150px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado12 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 13*/
+.quadrado13 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 130px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 5920px;
+	left: 350px;
+}
+
+.quadrado13 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide13 img {
+	width: 1865px;
+	position: relative;
+}
+/*FIM DA PÁGINA DE TDA*/
+
+/*INÍCIO DA PÁGINA DE FOBIA SOCIAL*/
+
+/*Slide 14*/
+.mascote_title_ansiedade14 img {
+	margin-top: 35px;
+	margin-left: 400px;
+}
+
+.quadrado14 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 150px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado14 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 15*/
+.quadrado15 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 130px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 3950px;
+	left: 350px;
+}
+
+.quadrado15 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide15 img {
+	width: 1865px;
+	position: relative;
+}
+
+.img_slide15 {
+	background-color: #e4e6ec;
+}
+
+/*Slide 16*/
+.quadrado16 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 130px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 4950px;
+	left: 350px;
+}
+
+.quadrado16 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide16 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 17*/
+.mascote_title_ansiedade17 img {
+	margin-top: 35px;
+	margin-right: 820px;
+}
+
+.quadrado17 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 150px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado17 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*FIM DA PÁGINA DE FOBIA SOCIAL*/
+
+/*INÍCIO DA PÁGINA DE TRANSTORNO DO PÂNICO*/
+
+/*Slide 18*/
+.mascote_title_ansiedade18 img {
+	margin-top: 35px;
+	margin-left: 820px;
+}
+
+.quadrado18 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 200px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado18 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 19*/
+.quadrado19 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 3950px;
+	left: 250px;
+}
+
+.quadrado19 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide19 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 20*/
+.quadrado20 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 5000px;
+	left: 250px;
+}
+
+.quadrado20 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide20 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 21*/
+.mascote_title_ansiedade21 img {
+	margin-top: 35px;
+	margin-right: 820px;
+}
+
+.quadrado21 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 112px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado21 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*FIM DA PÁGINA DE TRANSTORNO DO PÂNICO*/
+
+/*INÍCIO DA PÁGINA DE TRANSTORNOS ALIMENTARES*/
+
+/*Slide 22*/
+.mascote_title_ansiedade22 img {
+	margin-top: 35px;
+	margin-right: 820px;
+}
+
+.quadrado22 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 150px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado22 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 23*/
+.quadrado23 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 3850px;
+	left: 260px;
+}
+
+.quadrado23 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide23 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 24*/
+.quadrado24 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 4300px;
+	left: 250px;
+}
+
+.quadrado24 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide24 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 25*/
+.mascote_title_ansiedade25 img {
+	margin-top: 35px;
+	margin-left: 400px;
+}
+
+.quadrado25 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 150px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado25 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 26*/
+.quadrado26 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 90px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 6800px;
+	left: 250px;
+}
+
+.quadrado26 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide26 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*FIM DA PÁGINA DE TRANSTORNOS ALIMENTARES*/
+
+/*INÍCIO DA PÁGINA DE DEPRESSÃO*/
+
+/*CALENDÁRIO*/
+
+.calendario_depressao {
+	padding-top: 65px;
+	text-align: center;
+	width: 300px;
+}
+.container_depressao {
+	flex-direction: row-reverse;
+	display: flex;
+	width: 1400px;
+	margin-top: 5px;
+	padding-top: 50px;
+	margin-right: 1050px;
+}
+
+:root {
+	--primary-clr: #3aa9c7;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+/* nice scroll bar */
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	background: #f5f5f5;
+	border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--primary-clr);
+	border-radius: 50px;
+}
+
+body {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #e3f2fd;
+}
+.container {
+	position: relative;
+	width: 700px;
+	min-height: 850px;
+	margin: 0 auto;
+	padding: 5px;
+	color: #fff;
+	display: flex;
+
+	border-radius: 10px;
+	background-color: #3aa9c7;
+}
+.left {
+	width: 60%;
+	padding: 20px;
+}
+.calendar {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	color: #878895;
+	border-radius: 5px;
+	background-color: #fff;
+}
+/* set after behind the main element */
+.calendar::before,
+.calendar::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	width: 12px;
+	height: 97%;
+	border-radius: 0 5px 5px 0;
+	background-color: #d3d4d6d7;
+	transform: translateY(-50%);
+}
+.calendar::before {
+	height: 94%;
+	left: calc(100% + 12px);
+	background-color: rgb(153, 153, 153);
+}
+.calendar .month {
+	width: 100%;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 50px;
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+.calendar .month .prev,
+.calendar .month .next {
+	cursor: pointer;
+}
+.calendar .month .prev:hover,
+.calendar .month .next:hover {
+	color: var(--primary-clr);
+}
+.calendar .weekdays {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	font-size: 1rem;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+.weekdays div {
+	width: 14.28%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.calendar .days {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 20px;
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.calendar .days .day {
+	width: 14.28%;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: var(--primary-clr);
+	border: 1px solid #f5f5f5;
+}
+.calendar .days .day:nth-child(7n + 1) {
+	border-left: 2px solid #f5f5f5;
+}
+.calendar .days .day:nth-child(7n) {
+	border-right: 2px solid #f5f5f5;
+}
+.calendar .days .day:nth-child(-n + 7) {
+	border-top: 2px solid #f5f5f5;
+}
+.calendar .days .day:nth-child(n + 29) {
+	border-bottom: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:not(.prev-date, .next-date):hover {
+	color: #fff;
+	background-color: var(--primary-clr);
+}
+.calendar .days .prev-date,
+.calendar .days .next-date {
+	color: #b3b3b3;
+}
+.calendar .days .active {
+	position: relative;
+	font-size: 2rem;
+	color: #fff;
+	background-color: var(--primary-clr);
+}
+.calendar .days .active::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 10px 2px var(--primary-clr);
+}
+.calendar .days .today {
+	font-size: 2rem;
+}
+.calendar .days .event {
+	position: relative;
+}
+.calendar .days .event::after {
+	content: "";
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	width: 75%;
+	height: 6px;
+	border-radius: 30px;
+	transform: translateX(-50%);
+	background-color: var(--primary-clr);
+}
+.calendar .days .day:hover.event::after {
+	background-color: #fff;
+}
+.calendar .days .active.event::after {
+	background-color: #fff;
+	bottom: 20%;
+}
+.calendar .days .active.event {
+	padding-bottom: 10px;
+}
+.calendar .goto-today {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	color: var(--primary-clr);
+}
+.calendar .goto-today .goto {
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	overflow: hidden;
+	border: 1px solid var(--primary-clr);
+}
+.calendar .goto-today .goto input {
+	width: 100%;
+	height: 30px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	padding: 0 20px;
+	color: var(--primary-clr);
+	border-radius: 5px;
+}
+.calendar .goto-today button {
+	padding: 5px 10px;
+	border: 1px solid var(--primary-clr);
+	border-radius: 5px;
+	background-color: transparent;
+	cursor: pointer;
+	color: var(--primary-clr);
+}
+.calendar .goto-today button:hover {
+	color: #fff;
+	background-color: var(--primary-clr);
+}
+.calendar .goto-today .goto button {
+	border: none;
+	border-left: 1px solid var(--primary-clr);
+	border-radius: 0;
+}
+.container .right {
+	position: relative;
+	width: 40%;
+	min-height: 100%;
+	padding: 20px 0;
+}
+
+.right .today-date {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 40px;
+	padding-left: 70px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+.right .today-date .event-day {
+	font-size: 2rem;
+	font-weight: 500;
+}
+.right .today-date .event-date {
+	font-size: 1rem;
+	font-weight: 400;
+	color: #878895;
+}
+.events {
+	width: 100%;
+	height: 100%;
+	max-height: 600px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	padding-left: 4px;
+}
+.events .event {
+	position: relative;
+	width: 95%;
+	min-height: 70px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+	padding: 0 20px;
+	padding-left: 50px;
+	color: #fff;
+	background: linear-gradient(90deg, #3f4458, transparent);
+	cursor: pointer;
+}
+/* even event */
+.events .event:nth-child(even) {
+	background: transparent;
+}
+.events .event:hover {
+	background: linear-gradient(90deg, var(--primary-clr), transparent);
+}
+.events .event .title {
+	display: flex;
+	align-items: center;
+	pointer-events: none;
+}
+.events .event .title .event-title {
+	font-size: 1rem;
+	font-weight: 400;
+	margin-left: 20px;
+}
+.events .event i {
+	color: var(--primary-clr);
+	font-size: 0.5rem;
+}
+.events .event:hover i {
+	color: #fff;
+}
+.events .event .event-time {
+	font-size: 0.8rem;
+	font-weight: 400;
+	color: #878895;
+	margin-left: 15px;
+	pointer-events: none;
+}
+.events .event:hover .event-time {
+	color: #fff;
+}
+/* add tick in event after */
+.events .event::after {
+	content: "✓";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	font-size: 3rem;
+	line-height: 1;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.3;
+	color: var(--primary-clr);
+	transform: translateY(-50%);
+}
+.events .event:hover::after {
+	display: flex;
+}
+.add-event {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	color: #878895;
+	border: 2px solid #878895;
+	opacity: 0.5;
+	border-radius: 50%;
+	background-color: transparent;
+	cursor: pointer;
+}
+.add-event:hover {
+	opacity: 1;
+}
+.add-event i {
+	pointer-events: none;
+}
+.events .no-event {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #878895;
+}
+.add-event-wrapper {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	width: 90%;
+	max-height: 0;
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: #fff;
+	transform: translateX(-50%);
+	transition: max-height 0.5s ease;
+}
+.add-event-wrapper.active {
+	max-height: 300px;
+}
+.add-event-header {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	color: #3aa9c7;
+	border-bottom: 1px solid #f5f5f5;
+}
+.add-event-header .close {
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+.add-event-header .close:hover {
+	color: var(--primary-clr);
+}
+.add-event-header .title {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+.add-event-body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 20px;
+}
+.add-event-body .add-event-input {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+.add-event-body .add-event-input input {
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #f5f5f5;
+	padding: 0 10px;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #3aa9c7;
+}
+.add-event-body .add-event-input input::placeholder {
+	color: #a5a5a5;
+}
+.add-event-body .add-event-input input:focus {
+	border-bottom: 1px solid var(--primary-clr);
+}
+.add-event-body .add-event-input input:focus::placeholder {
+	color: var(--primary-clr);
+}
+.add-event-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+.add-event-footer .add-event-btn {
+	height: 40px;
+	font-size: 1rem;
+	font-weight: 500;
+	outline: none;
+	border: none;
+	color: #fff;
+	background-color: var(--primary-clr);
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 5px 10px;
+	border: 1px solid var(--primary-clr);
+}
+.add-event-footer .add-event-btn:hover {
+	background-color: transparent;
+	color: var(--primary-clr);
+}
+
+/* media queries */
+
+@media screen and (max-width: 1000px) {
+	body {
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.container {
+		min-height: 100vh;
+		flex-direction: column;
+		border-radius: 0;
+	}
+	.container .left {
+		width: 100%;
+		height: 100%;
+		padding: 20px 0;
+	}
+	.container .right {
+		width: 100%;
+		height: 100%;
+		padding: 20px 0;
+	}
+	.calendar::before,
+	.calendar::after {
+		top: 100%;
+		left: 50%;
+		width: 97%;
+		height: 12px;
+		border-radius: 0 0 5px 5px;
+		transform: translateX(-50%);
+	}
+	.calendar::before {
+		width: 94%;
+		top: calc(100% + 12px);
+	}
+	.events {
+		padding-bottom: 340px;
+	}
+	.add-event-wrapper {
+		bottom: 100px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.calendar .month {
+		height: 75px;
+	}
+	.calendar .weekdays {
+		height: 50px;
+	}
+	.calendar .days .day {
+		height: 40px;
+		font-size: 0.8rem;
+	}
+	.calendar .days .day.active,
+	.calendar .days .day.today {
+		font-size: 1rem;
+	}
+	.right .today-date {
+		padding: 20px;
+	}
+}
+
+/*Slide 27*/
+
+.mascote_title_ansiedade27 img {
+	margin-top: 35px;
+	margin-left: 400px;
+}
+
+.quadrado27 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado27 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 28*/
+.quadrado28 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 4050px;
+	left: 250px;
+}
+
+.quadrado28 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide28 img {
+	width: 1865px;
+	position: relative;
+}
+.img_slide28 {
+	background-color: #4cb6cb;
+}
+
+/*Slide 29*/
+.quadrado29 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 5410px;
+	left: 250px;
+}
+
+.quadrado29 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide29 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 30*/
+.mascote_title_ansiedade30 img {
+	margin-top: 35px;
+	margin-left: 820px;
+	position: relative;
+	bottom: 300px;
+	left: 10px;
+}
+
+.quadrado30 {
+	background-color: rgb(255, 255, 255);
+	width: 700px;
+	height: 50px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 450px;
+	margin-top: 205px;
+}
+
+.quadrado30 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.podcast {
+	position: relative;
+	bottom: 450px;
+	right: 300px;
+}
+
+/*Slide 31*/
+.mascote_title_ansiedade31 img {
+	margin-top: -100px;
+	margin-right: 820px;
+}
+
+.quadrado31 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 100px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+.quadrado31 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*FIM DA PÁGINA DE DEPRESSÃO*/
+
+/*INÍCIO DA PÁGINA DE TRANSTORNO DE PERSONALIDADE*/
+
+/*Slide 32*/
+.mascote_title_ansiedade32 img {
+	margin-top: 35px;
+	margin-left: 720px;
+}
+
+.quadrado32 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 200px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado32 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 33*/
+.quadrado33 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 3950px;
+	left: 250px;
+}
+
+.quadrado33 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide33 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 34*/
+.mascote_title_ansiedade34 img {
+	margin-top: 35px;
+	margin-right: 820px;
+}
+
+.quadrado34 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 200px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado34 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 35*/
+.mascote_title_ansiedade35 img {
+	margin-top: 35px;
+	margin-left: 700px;
+}
+
+.quadrado35 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 180px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+}
+
+.quadrado35 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 36*/
+.quadrado36 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 6550px;
+	left: 250px;
+}
+
+.quadrado36 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide36 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 37*/
+.mascote_title_ansiedade37 img {
+	margin-top: 0;
+	margin-left: 820px;
+	position: relative;
+	bottom: 300px;
+	left: 50px;
+}
+
+.quadrado37 {
+	background-color: rgb(255, 255, 255);
+	width: 850px;
+	height: 100px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 380px;
+	margin-top: 250px;
+}
+
+.quadrado37 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.artistas {
+	position: relative;
+	bottom: 450px;
+	right: 350px;
+}
+
+/*FIM DA PÁGINA DE TRANSTORNO DE PERSONALIDADE*/
+
+/*INÍCIO DA PÁGINA DE AUTISMO*/
+
+/*Slide 38*/
+.mascote_title_ansiedade38 img {
+	margin-top: 35px;
+	margin-right: 410px;
+}
+
+.quadrado38 {
+	background-color: rgb(255, 255, 255);
+	width: 900px;
+	height: 200px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-left: 150px;
+	margin-bottom: 45px;
+}
+
+.quadrado38 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 39*/
+.quadrado39 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 190px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 2950px;
+	left: 440px;
+}
+
+.quadrado39 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_slide39 img {
+	width: 1865px;
+	position: relative;
+}
+
+/*Slide 40*/
+.mascote_title_ansiedade40 img {
+	margin-top: 35px;
+	margin-left: 400px;
+}
+
+.quadrado40 {
+	background-color: rgb(255, 255, 255);
+	width: 800px;
+	height: 110px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-left: 40px;
+	margin-bottom: 45px;
+}
+
+.quadrado40 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+/*Slide 41*/
+.quadrado41 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 140px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	margin-bottom: 45px;
+	position: absolute;
+	top: 4800px;
+	left: 250px;
+}
+
+.quadrado41 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_serie1 img {
+	border-radius: 100px;
+	width: 800px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+		rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/*Slide 42*/
+.quadrado42 {
+	background-color: rgb(255, 255, 255);
+	width: 1000px;
+	height: 140px;
+	box-shadow: 9px 12px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-right: 250px;
+	position: absolute;
+	top: 5599px;
+	left: 490px;
+}
+
+.quadrado42 > p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.img_serie2 img {
+	border-radius: 100px;
+	width: 800px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+		rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.img_serie2 {
+	margin-top: 345px;
+}
+
+/*FIM DA PÁGINA DE AUTISMO*/
+
+/*Footer*/
+.finally {
+	padding-left: 200px;
+	margin-top: 200px;
+	padding: 20px;
+	width: 1290px;
+	height: 199px;
+	background-color: #47b0cd;
+}
+.second_image img {
+	height: 70px;
+	margin-left: 87%;
+	margin-top: 5%;
+}
+
+.button-jogar {
+	padding: 20px;
+	width: 100px;
+	background-color: #47b0cd;
+	border-radius: 20%;
+	margin-top: 20px;
+	margin-right: 300px;
+}
+.button-jogar:hover {
+  color: #8a3274;
+}
+.button-jogar a {
+	text-decoration: none;
+	color: white;
+}
+.button-jogar p {
+	text-align: center;
+}
+
+ .button-jogar2 {
+	padding: 20px;
+	width: 100px;
+	background-color: #47b0cd;
+	border-radius: 20%;
+	margin-top: 20px;
+	margin-right: 500px;
+}
+.button-jogar2:hover {
+  color: #8a3274;
+}
+.button-jogar2 a {
+	text-decoration: none;
+	color: white;
+}
+.button-jogar2 p {
+	text-align: center;
+} 
+
+.button-jogar3 {
+	padding: 20px;
+	width: 100px;
+	background-color: #47b0cd;
+	border-radius: 20%;
+	margin-top: 20px;
+	margin-left: 199px;
+}
+.button-jogar3:hover {
+  color: #8a3274;
+}
+.button-jogar3 a {
+	text-decoration: none;
+	color: white;
+}
+.button-jogar3 p {
+	text-align: center;
+} 
+
+
+
+
+a {
+	text-decoration: none;
+	color: white;
+}

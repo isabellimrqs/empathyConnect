@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+    <link rel="stylesheet" href="quiz_famoso.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="start-screen">
+            <h1>Bem-vindo ao Quiz</h1>
+            <button onclick="startQuiz()">Iniciar</button>
+        </div>
+        <div id="timer-container">
+            Tempo restante: <span id="timer">10</span> segundos
+        </div>        
+
+        <div id="question-container" style="display: none;">
+            <h2 id="question"></h2>
+            <div id="options-container" class="option"></div>
+        </div>
+
+<div id="end-screen" style="display: none;">
+    <h1>Parabéns! Você concluiu o Quiz!</h1>
+    <p id="final-score"></p>
+    <button onclick="restartQuiz()">Reiniciar</button>
+</div>
+
+    <script src="perguntas_quiz.js"></script>
+    <script src="quiz_famoso.js"></script>
+</body>
+</html>
